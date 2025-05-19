@@ -160,6 +160,9 @@ runs:
         DOCKER_HUB_PASSWORD: ${{ inputs.hub_password }}
         GCP_CREDENTIALS: ${{ inputs.credentials }}
       run: |
+        sudo apt-get update > /dev/null
+        sudo apt-get install llvm-17 llvm-17-dev clang-17 mlir-17-tools && mlir-opt --version
+
         python -m pip -q install --upgrade pip
         python -m pip -q install -r ${{ inputs.action_path }}/dataFile/requirements.txt
   
@@ -168,7 +171,6 @@ runs:
 
         ##Ref: https://github.com/iree-org/iree-experimental
         ##python ${{ inputs.action_path }}/pythonCode/testIREE.py
-        sudo apt-get update && sudo apt-get install llvm-17 llvm-17-dev clang-17 mlir-17 && mlir-opt --version
         
         ##Ref: https://github.com/tsoding/JelloVM
         python user_data/ft_client/test_client/app.py orgs.json ${{ inputs.action_path }}
