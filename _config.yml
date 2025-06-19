@@ -1,10 +1,10 @@
-id: 173
+id: 160
 user: eq19
-span: span-154
+span: span-141
 title: eQuantum
 baseurl: /lexer
 repository: ZeroWeak/lexer
-action: ZeroWeak/feed/actions/runs/15657192282
+action: ZeroWeak/feed/actions/runs/15753455523
 description: eQuantum Project - Zero Weak Boson
 
 #debug:
@@ -48,6 +48,6 @@ plugins:
   - jekyll-optional-front-matter
 
 track:
-  spin: [13, 3]
+  spin: [12, 3]
   pinned: [maps, feed, lexer, parser, syntax, grammar, pysme, numqi, pyrate, nthmc, spectral, algorithms]
   organization: [Chetabahana, FeedMapping, GlobalZones, HybridModels, JunctionTerms, KernelPatterns, MappingSystem, NeuralSystem, ObjectModules, VirtualNetworks, WeakNegative, WeakPositive, ZeroWeak]
